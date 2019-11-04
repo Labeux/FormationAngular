@@ -7,4 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Gestion des wookies';
+  title2 = 'Liste des wookies';
+  imageUrl = 'https://oddstuffmagazine.com/wp-content/uploads/2012/09/0LsHp.jpg';
+  isDisplayLogo = false;
 }
