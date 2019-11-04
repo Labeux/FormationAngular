@@ -17,12 +17,10 @@ export class AppComponent {
   libelleSupprimerImage = 'Supprimer image';
   libelleAfficherImage = 'Afficher image';
 
-  wookieList = [];
+  
 
   constructor() {
-    this.wookieList.push('wookie');
-    this.wookieList.push('wookie2');
-    this.wookieList.push('wookie3');
+    
   }
 
   /**
