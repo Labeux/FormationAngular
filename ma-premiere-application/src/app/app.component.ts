@@ -11,11 +11,19 @@ export class AppComponent {
 
   // Image
   imageUrl = 'https://oddstuffmagazine.com/wp-content/uploads/2012/09/0LsHp.jpg';
-  isDisplayLogo = true;
+  isDisplayLogo = false;
 
   // Bouton
   libelleSupprimerImage = 'Supprimer image';
   libelleAfficherImage = 'Afficher image';
+
+  wookieList = [];
+
+  constructor() {
+    this.wookieList.push('wookie');
+    this.wookieList.push('wookie2');
+    this.wookieList.push('wookie3');
+  }
 
   /**
    * Fonction du bouton
