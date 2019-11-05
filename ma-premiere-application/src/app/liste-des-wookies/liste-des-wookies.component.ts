@@ -1,5 +1,6 @@
 import { Component, OnInit, ComponentFactory, ComponentFactoryResolver } from '@angular/core';
 import { Wookie } from '../models/wookie';
+import { LoggerService } from '../services/logger.service';
 
 @Component({
   selector: 'app-liste-des-wookies',
@@ -11,7 +12,7 @@ export class ListeDesWookiesComponent implements OnInit {
 
   currentWookie : Wookie;
 
-  constructor() { 
+  constructor(private _logger: LoggerService) { 
     this.wookieList.push(new Wookie(1, 'Wookie 1', new Date('01/01/2000')));
     this.wookieList.push(new Wookie(2, 'Wookie 2', new Date()));
     this.wookieList.push(new Wookie(3, 'Wookie 3', new Date()));
@@ -22,7 +23,7 @@ export class ListeDesWookiesComponent implements OnInit {
   }
 
   fonctionClickEdition(wookie : Wookie) {
-    console.log(`Bouton Edition click wookie ${wookie.id}`);
+    this._logger.log(`Bouton Edition click wookie ${wookie.id}`);
     this.currentWookie = wookie;
   }
 }

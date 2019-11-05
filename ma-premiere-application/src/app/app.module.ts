@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ListeDesWookiesComponent } from './liste-des-wookies/liste-des-wookies.component';
 import { WookieResumeComponent } from './wookie-resume/wookie-resume.component';
 import { WookieEditionComponent } from './wookie-edition/wookie-edition.component';
+import { LoggerService } from './services/logger.service';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { WookieEditionComponent } from './wookie-edition/wookie-edition.componen
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    LoggerService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

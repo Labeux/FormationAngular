@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Wookie } from '../models/wookie';
+import { LoggerService } from '../services/logger.service';
 
 @Component({
   selector: 'app-wookie-resume',
@@ -10,6 +11,10 @@ export class WookieResumeComponent implements OnInit {
   @Input() wookie : Wookie;
 
   @Output() eventEdition = new EventEmitter<Wookie>(false);
+
+  constructor(private _logger: LoggerService) {
+    
+  }
 
   ngOnInit(){}
 
