@@ -7,6 +7,7 @@ import { ListeDesWookiesComponent } from './liste-des-wookies/liste-des-wookies.
 import { WookieResumeComponent } from './wookie-resume/wookie-resume.component';
 import { WookieEditionComponent } from './wookie-edition/wookie-edition.component';
 import { LoggerService } from './services/logger.service';
+import { WookieService } from './services/wookie.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LoggerService } from './services/logger.service';
     AppRoutingModule
   ],
   providers: [
-    LoggerService
+    LoggerService,
+    WookieService
   ],
   bootstrap: [AppComponent]
 })
