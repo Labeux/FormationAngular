@@ -1,6 +1,4 @@
-<li>
-    <div>{{ wookie.id }}</div>
-    <div>{{ wookie.prenom }}</div>
-    <div>{{ wookie.dateNaissance | date:'dd/MM/yyyy' }}</div>
-    <div><button>Editer</button></div>
-</li>
+<div>{{ wookie.id }}</div>
+<div>{{ wookie.prenom }}</div>
+<div>{{ wookie.dateNaissance | date:'dd/MM/yyyy' }}</div>
+<div><button (click) = "clickEdition()">Editer</button></div>

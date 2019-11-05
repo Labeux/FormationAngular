@@ -8,6 +8,9 @@ import { Wookie } from '../models/wookie';
 })
 export class ListeDesWookiesComponent implements OnInit {
   wookieList : Wookie[] = [];
+
+  currentWookie : Wookie;
+
   constructor() { 
     this.wookieList.push(new Wookie(1, 'Wookie 1', new Date('01/01/2000')));
     this.wookieList.push(new Wookie(2, 'Wookie 2', new Date()));
@@ -18,4 +21,8 @@ export class ListeDesWookiesComponent implements OnInit {
     
   }
 
+  fonctionClickEdition(wookie : Wookie) {
+    console.log(`Bouton Edition click wookie ${wookie.id}`);
+    this.currentWookie = wookie;
+  }
 }

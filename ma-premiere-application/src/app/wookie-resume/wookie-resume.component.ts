@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Wookie } from '../models/wookie';
 
 @Component({
@@ -9,10 +9,12 @@ import { Wookie } from '../models/wookie';
 export class WookieResumeComponent implements OnInit {
   @Input() wookie : Wookie;
 
-  constructor() {
-   }
+  @Output() eventEdition = new EventEmitter<Wookie>(false);
 
-  ngOnInit(){
+  ngOnInit(){}
+
+  clickEdition() {
+    this.eventEdition.emit(this.wookie);
   }
 
 }

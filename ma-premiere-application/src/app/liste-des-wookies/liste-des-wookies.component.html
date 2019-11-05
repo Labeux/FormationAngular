@@ -1,3 +1,9 @@
 <ul>
-    <app-wookie-resume *ngFor="let wookieItem of wookieList" [wookie] = "wookieItem"></app-wookie-resume>
+    <li>
+        <app-wookie-resume *ngFor="let wookieItem of wookieList" 
+                            [wookie] = "wookieItem"
+                            (eventEdition) = "fonctionClickEdition($event)"></app-wookie-resume>
+    </li>
 </ul>
+<app-wookie-edition [wookie] = "currentWookie" 
+                    (eventAnnuler) = "fonctionClickAnnuler()"></app-wookie-edition>
