@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ComponentFactory, ComponentFactoryResolver } from '@angular/core';
+import { Wookie } from '../models/wookie';
 
 @Component({
   selector: 'app-liste-des-wookies',
@@ -6,14 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./liste-des-wookies.component.css']
 })
 export class ListeDesWookiesComponent implements OnInit {
-  wookieList = [];
+  wookieList : Wookie[] = [];
   constructor() { 
-    this.wookieList.push('wookie');
-    this.wookieList.push('wookie2');
-    this.wookieList.push('wookie3');
+    this.wookieList.push(new Wookie(1, 'Wookie 1', new Date('01/01/2000')));
+    this.wookieList.push(new Wookie(2, 'Wookie 2', new Date()));
+    this.wookieList.push(new Wookie(3, 'Wookie 3', new Date()));
   }
 
   ngOnInit() {
+    
   }
 
 }
