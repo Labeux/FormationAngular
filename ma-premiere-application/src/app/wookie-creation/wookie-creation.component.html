@@ -14,9 +14,9 @@
         </div>
         <div class="row">
             <div class="input-field col s6">
-                <button [disabled]="! maForme.valid" class="btn waves-effect waves-light" name="action">
-                    Submit
-                    <i class="material-icons right">Ajouter</i>
+              <!-- EB: Très important le Submit collé au chevron, c'est un "bug css" -->
+               <button [disabled]="! maForme.valid" class="btn waves-effect waves-light" name="action">Submit
+                  <i class="material-icons right">Ajouter</i>
                 </button>
             </div>
         </div>
