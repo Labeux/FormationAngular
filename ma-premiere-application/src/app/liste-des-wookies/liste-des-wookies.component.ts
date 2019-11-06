@@ -13,8 +13,11 @@ export class ListeDesWookiesComponent implements OnInit {
 
   currentWookie : Wookie;
 
-  constructor(private _logger: LoggerService, private _wookieService: WookieService) { 
-    this.wookieList = _wookieService.getAll();
+  constructor(private _logger: LoggerService, 
+              private _wookieService: WookieService
+              ) { 
+    //this.wookieList = _wookieService.getAll();
+    this._wookieService.getAll().subscribe(tableau => this.wookieList = tableau);
   }
 
   ngOnInit() {
