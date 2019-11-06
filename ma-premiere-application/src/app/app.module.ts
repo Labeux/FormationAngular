@@ -11,6 +11,8 @@ import { WookieEditionComponent } from './wookie-edition/wookie-edition.componen
 import { LoggerService } from './services/logger.service';
 import { WookieService } from './services/wookie.service';
 import { WookieCreationComponent } from './wookie-creation/wookie-creation.component';
+import { JediComponent } from './jedi/jedi.component';
+import { MenuComponent } from './menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { WookieCreationComponent } from './wookie-creation/wookie-creation.compo
     ListeDesWookiesComponent,
     WookieResumeComponent,
     WookieEditionComponent,
-    WookieCreationComponent
+    WookieCreationComponent,
+    JediComponent,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
