@@ -1,5 +1,5 @@
 <div class="row">
-    <form class="col s12">
+    <form class="col s12" #maForme="ngForm">
         <div class="row">
             <div class="input-field col s6">
                 <input placeholder="" 
@@ -7,13 +7,14 @@
                         name="prenom" 
                         [(ngModel)]="wookie.prenom"
                         type="text" 
-                        class="validate">
+                        class="validate"
+                        required="true">
                 <label for="prenom">Prenom</label>
             </div>
         </div>
         <div class="row">
             <div class="input-field col s6">
-                <button class="btn waves-effect waves-light" name="action">
+                <button [disabled]="! maForme.valid" class="btn waves-effect waves-light" name="action">
                     Submit
                     <i class="material-icons right">Ajouter</i>
                 </button>
