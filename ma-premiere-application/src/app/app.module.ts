@@ -8,13 +8,15 @@ import { WookieResumeComponent } from './wookie-resume/wookie-resume.component';
 import { WookieEditionComponent } from './wookie-edition/wookie-edition.component';
 import { LoggerService } from './services/logger.service';
 import { WookieService } from './services/wookie.service';
+import { WookieCreationComponent } from './wookie-creation/wookie-creation.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListeDesWookiesComponent,
     WookieResumeComponent,
-    WookieEditionComponent
+    WookieEditionComponent,
+    WookieCreationComponent
   ],
   imports: [
     BrowserModule,
