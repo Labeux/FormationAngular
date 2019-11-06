@@ -1,34 +1,37 @@
-<div *ngIf="wookie">
-    <form>
-        <div>
-            <div>
-                <label for="">Id</label>
-            </div>
-            <div>
-                <label for="">{{ wookie.id }}</label>
+<div *ngIf="wookie" class="row">
+    <form class="col s12">
+        <div class="row">
+            <div class="input-field col s12">
+                <input disabled value="{{ wookie.id }}" id="disabled" type="text" class="validate">
+                <label for="disabled">Id</label>
             </div>
         </div>
-        <div>
-            <div>
+        <div class="row">
+            <div class="col s2">
                 <label for="">Prénom</label>
             </div>
-            <div>
+            <div class="col s2">
+                
                 <input type="text" name="prenom" value="{{ wookie.prenom }}">
             </div>
         </div>
-        <div>
-            <div>
-                <label for="">Date de naissance</label>
-            </div>
-            <div>
-                <input type="date" name="dateNaissance" id="dateNaissance" value="{{ wookie.dateNaissance }}">
+        <div class="row">
+            <div class="col s2">
+               <div class="input-field col s6">
+                    <div class="row">
+                        <label for="">Date de naissance</label>
+                        <input type="date" name="dateNaissance" id="dateNaissance" value="{{ wookie.dateNaissance }}">
+                    </div>
+                </div>
             </div>
         </div>
-        <div>
-            <button (click)="ClickValider()">Valider</button>
-        </div>
-        <div>
-            <button (click)="ClickAnnuler()">Annuler</button>
+        <div class="row">
+            <div  class="col s2">
+                <button (click)="ClickAnnuler()">Annuler</button>
+            </div>
+            <div  class="col s2">
+                <button (click)="ClickValider()">Valider</button>
+            </div>
         </div>
     </form>
 </div>

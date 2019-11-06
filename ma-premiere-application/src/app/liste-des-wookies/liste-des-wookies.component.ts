@@ -22,6 +22,6 @@ export class ListeDesWookiesComponent implements OnInit {
 
   fonctionClickEdition(wookie : Wookie) {
     this._logger.log(`Bouton Edition click wookie ${wookie.id}`);
-    this.currentWookie = wookie;
+    this.currentWookie = Object.assign({}, wookie);
   }
 }
